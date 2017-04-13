@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html>
+<head><title>Cat Got Your Tongue?</title>
+<link href="style.css" type="text/css" rel="stylesheet">
+<link href="https://fonts.google.com/?category=Sans+Serif">
+<div id="txt"></div>
+<div class="header">
+	<h1><a href=index.html>Cat got your Tongue?</h1>
+</div>
+<div class="nav">
+	<ul>
+		<li><a href=index.html> Home</a></li>
+		<li><a href=about.html> About</a></li>
+		<li><a href=contact.php>Contact Us</a></li>
+		<li><a href=offers.html>Special Offers</a></li>
+		<li><a href=links.html>Useful Links</a></li>
+	</ul>
+	</div>
+	<div class="pic">
+	<p><h3><a target="_blank" href=offers.html>The Best new & used Taxidermied Products</a></h3></p>
+			<div class="spiel"><em>Cat got your Tongue?</em><sup>&copy</sup> specialises in the service & sale of your dearly departed<br>
+		<p>Click <a href=about.html>here</a> to learn more about us.</p>
+		</div>
+<div id = "clock" style="position:relative;">
+<script>
+function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('txt').innerHTML =
+    h + ":" + m + ":" + s;
+    var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // must add zero in front of numbers < 10
+    return i;
+}
+</script>
+</div>
+</head>
+<body onload="startTime()">
+<div class = sol>
+<div class="cara" style="max-width:50% max-height=100px;">
+  <img class="imgchange" src="image3.jpg">
+  <img class="imgchange" src="image6.jpg">
+  <img class="imgchange" src="image5.jpg">
+</div>
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("imgchange");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 3000); // Change image every 3 seconds
+}
+</script>
+</div>
+
+		<div class="extras"
+	<p>News & Updates</p>
+	   <a class="twitter-timeline"  href="https://twitter.com/hashtag/taxidermy" data-widget-id="818821418326589441">#taxidermy Tweets</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</div>
+</div>
+		<div class="foot">
+		<p>&copy catgotyourtongue.ie All content is registered to their original owners unless otherwise stated.</p>
+</div>
+</body>
+</html>

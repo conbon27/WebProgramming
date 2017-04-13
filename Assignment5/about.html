@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html>
+<head><title>About Us</title></head>
+<link href="style.css" type="text/css" rel="stylesheet">
+<link href="https://fonts.google.com/?category=Sans+Serif">
+</head>
+<body onload="startTime()">
+<div id="txt"></div>
+<div class="header">
+	<h1><a href=index.html>Cat got your Tongue?</h1>
+</div>
+<div class="nav">
+	<ul>
+		<li><a href=index.html> Home</a></li>
+		<li><a href=about.html> About</a></li>
+		<li><a href=contact.php>Contact Us</a></li>
+		<li><a href=offers.html>Special Offers</a></li>
+		<li><a href=links.html>Useful Links</a></li>
+	</ul>
+	<script>
+function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('txt').innerHTML =
+    h + ":" + m + ":" + s;
+    var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // must add zero in front of numbers < 10
+    return i;
+}
+</script>
+	</div>
+	<div class="about"><h1>About Us</h1>
+		<p> We are an unique locally based establisment specialising in caring for the ones you love the most.</p>
+	<ul>
+		<li> Taxidermy
+		<li> Taxidermy accessories
+		<li> Fluids
+		<li> Miscellaneous
+	</ul>
+	</div>
+	<div class="mission"><h2>Mission Statement</h2>
+	<p>
+		<br>Cat Got Your Tongue? endevours to be the best damn taxidermy company in all the wild west.<br><br>
+		We do this by tirelessly caring to you and your pet's needs in their final slumber<br><br>
+		We are fully licensed & have consultants on hand to guide you through this process at this distressing time.<br><br>
+		<br> We cater for all your taxidermy needs - we sell animals - direct from our workbence, delivered directly to your door.
+	</p>
+</div>
+<div class = sol>
+<div class="cara" style="max-width:50% max-height=100px;float: center; " >
+  <img class="imgchange" src="image3.jpg">
+  <img class="imgchange" src="image6.jpg">
+  <img class="imgchange" src="image5.jpg">
+</div>
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("imgchange");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 2100); // Change image every 2.1 seconds
+}
+</script>
+</div>
+		<div class="foot">
+		<p>&copy catgotyourtongue.ie All content is registered to their original owners unless otherwise stated.</p>
+</div>
+</body>
+</html>

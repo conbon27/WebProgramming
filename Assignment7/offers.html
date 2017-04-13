@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Offers</title>
+</head>
+<link href="style.css" type="text/css" rel="stylesheet">
+<link href="https://fonts.google.com/?category=Sans+Serif">
+
+<head>
+	<script src="formcon.js">
+	</script>
+	<style>
+		table {
+			font-family: Verdana, sans-serif;
+			border-collapse: collapse;
+			width: 100%;
+		}
+
+		td,
+		th {
+			border: 1px solid #dddddd;
+			text-align: left;
+			padding: 15px;
+		}
+
+		tr:nth-child(even) {
+			background-color: #dddddd;
+		}
+	</style>
+	<script>
+		function startTime() {
+			var today = new Date();
+			var h = today.getHours();
+			var m = today.getMinutes();
+			var s = today.getSeconds();
+			m = checkTime(m);
+			s = checkTime(s);
+			document.getElementById('txt').innerHTML =
+				h + ":" + m + ":" + s;
+			var t = setTimeout(startTime, 500);
+		}
+
+		function checkTime(i) {
+			if (i < 10) {
+				i = "0" + i
+			}; // must add zero in front of numbers < 10
+			return i;
+		}
+	</script>
+</head>
+
+<body onload="startTime()">
+	<div id="txt"></div>
+	<div class="header">
+		<h1><a href=index.html>Cat got your Tongue?</h1>
+	</div>
+	<div class="nav">
+		<ul>
+			<li><a href=index.html> Home</a></li>
+			<li><a href=about.html> About</a></li>
+			<li><a href=contact.php>Contact Us</a></li>
+			<li><a href=offers.html>Special Offers</a></li>
+			<li><a href=links.html>Useful Links</a></li>
+		</ul>
+	</div>
+	<h1><center>Check out these special offers!</center></h1><br>
+	<div class="offers"><br>
+		<table style="width:100%">
+			<tr>
+				<th>Product Description</th>
+				<th>Price</th>
+				<th>Product</th>
+			</tr>
+			<tr>
+				<td>Junior was a loyal pet to owner Hammerstein until a faithful day when an escape attempt went arry.</td>
+				<td><strong>&euro;99.99</strong> (incl. postage and packaging)</td>
+				<td>
+					<div id="junior"></div><img src="image9.jpg" id="juni" style="max-height:70%; max-width:80%" ; onmouseover="document.getElementById('junior').innerHTML= 'Most Prized Position could be yours for 2017';" onmouseout="document.getElementById('junior').innerHTML= '';"
+					    </td>
+			</tr>
+			<tr>
+				<td>Sparky is so cute in this pose you could just eat him up.
+					<br>(Disclaimer - it is not advised to injest any of our products).</td>
+				<td><strong>&euro;99.99</strong> (incl. postage and packaging).</td>
+				<td>
+					<div id="sparky"></div><img id="spar" src="image10.jpg" style="max-height:60%; max-width:80%" onmouseover="document.getElementById('sparky').innerHTML= 'Look at those eyes, they could be yours';" onmouseout="document.getElementById('sparky').innerHTML= '';" </td>
+			</tr>
+	</div>
+	<div class=s ol>
+		<div class="cara" style="max-width:50% max-height=100px;float: center; ">
+			<img class="imgchange" src="image11.jpg">
+			<img class="imgchange" src="image6.jpg">
+			<img class="imgchange" src="image5.jpg">
+		</div>
+		<script>
+			var myIndex = 0;
+			carousel();
+
+			function carousel() {
+				var i;
+				var x = document.getElementsByClassName("imgchange");
+				for (i = 0; i < x.length; i++) {
+					x[i].style.display = "none";
+				}
+				myIndex++;
+				if (myIndex > x.length) {
+					myIndex = 1
+				}
+				x[myIndex - 1].style.display = "block";
+				setTimeout(carousel, 2100); // Change image every 2.1 seconds
+			}
+		</script>
+	</div>
+	<div class="foot">
+		<div class="foot">
+			<p>&copy catgotyourtongue.ie All content is registered to their original owners unless otherwise stated.</p>
+		</div>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Links</title>
+</head>
+<link href="style.css" type="text/css" rel="stylesheet">
+<link href="https://fonts.google.com/?category=Sans+Serif">
+<script>
+    function startTime() {
+        var today = new Date();
+        var h = today.getHours();
+        var m = today.getMinutes();
+        var s = today.getSeconds();
+        m = checkTime(m);
+        s = checkTime(s);
+        document.getElementById('txt').innerHTML =
+            h + ":" + m + ":" + s;
+        var t = setTimeout(startTime, 500);
+    }
+
+    function checkTime(i) {
+        if (i < 10) {
+            i = "0" + i
+        }; // must add zero in front of numbers < 10
+        return i;
+    }
+</script>
+</head>
+
+<body onload="startTime()">
+    <div id="txt"></div>
+    <h1><a href=index.html>Cat got your Tongue?</h1>
+    </div>
+    <div class="nav">
+        <ul>
+            <li><a href=index.html> Home</a></li>
+            <li><a href=about.html> About</a></li>
+            <li><a href=contact.html>Contact Us</a></li>
+            <li><a href=offers.html>Special Offers</a></li>
+            <li><a href=links.html>Useful Links</a></li>
+        </ul>
+    </div>
+    <div class="links">
+        <h1><p> Take a look at our trusted partners:</p></h1>
+        <ul>
+            <li><a href="https://en.wikipedia.org/wiki/Taxidermy" target=_blank> Taxidermy on Wikipedia</a></li>
+            <li><a href="http://www.taxidermy.net/" target=_blank> Taxidermy.net </a></li>
+            <li><a href="http://lostcrafts.com/Taxidermy/Taxidermy-Main.html" target=_blank>The Art of Taxidermy</a></li>
+            <li><a href="http://www.taxidermy.org.uk/" target=_blank>UK Guild of Taxidermy</a></li>
+            <li><a href="http://www.historical-taxidermy.co.uk/" target=_blank>Historical Taxidermy</a></li>
+            <p><br>If you leave, remember to return,<br>we know where you live :)</p>
+    </div>
+    <div class=s ol>
+        <div class="cara" style="max-width:50% max-height=100px;float: center; ">
+            <img class="imgchange" src="image3.jpg">
+            <img class="imgchange" src="image6.jpg">
+            <img class="imgchange" src="image5.jpg">
+        </div>
+        <script>
+            var myIndex = 0;
+            carousel();
+
+            function carousel() {
+                var i;
+                var x = document.getElementsByClassName("imgchange");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                myIndex++;
+                if (myIndex > x.length) {
+                    myIndex = 1
+                }
+                x[myIndex - 1].style.display = "block";
+                setTimeout(carousel, 2100); // Change image every 2.1 seconds
+            }
+        </script>
+    </div>
+    <div class="foot">
+        <p>&copy catgotyourtongue.ie All content is registered to their original owners unless otherwise stated.</p>
+    </div>
+</body>
+
+</html>
+
+</html>
